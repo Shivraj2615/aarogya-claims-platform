@@ -1,0 +1,218 @@
+.patient-details-page {
+  min-height: 100vh;
+  background: #f4f7fb;
+}
+
+.patient-details-main {
+  width: 88%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.details-heading {
+  margin-bottom: 28px;
+}
+
+.details-heading h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  color: #172033;
+}
+
+.details-heading p {
+  margin: 0;
+  color: #667085;
+}
+
+/* Main card */
+
+.claim-details-card {
+  background: #ffffff;
+  border: 1px solid #e5eaf1;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
+}
+
+/* Status header */
+
+.claim-status-header {
+  padding: 24px 28px;
+  border-bottom: 1px solid #eaecf0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.claim-status-header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #172033;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-pending {
+  background: #fff7e6;
+  color: #b54708;
+}
+
+.status-approved {
+  background: #ecfdf3;
+  color: #027a48;
+}
+
+.status-rejected {
+  background: #fef3f2;
+  color: #b42318;
+}
+
+/* Information */
+
+.claim-info-section {
+  padding: 28px;
+}
+
+.claim-info-section h3 {
+  margin: 0 0 20px;
+  font-size: 16px;
+  color: #344054;
+}
+
+.claim-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.info-item {
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 10px;
+}
+
+.info-item.full-width {
+  grid-column: 1 / -1;
+}
+
+.info-label {
+  display: block;
+  margin-bottom: 6px;
+  color: #667085;
+  font-size: 13px;
+}
+
+.info-value {
+  color: #172033;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Comments */
+
+.comments-box {
+  padding: 18px;
+  background: #f9fafb;
+  border-radius: 10px;
+  color: #344054;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* Document */
+
+.document-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 4px;
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.document-link:hover {
+  text-decoration: underline;
+}
+
+/* Actions */
+
+.details-actions {
+  padding: 20px 28px;
+  border-top: 1px solid #eaecf0;
+}
+
+.back-dashboard-button {
+  padding: 11px 18px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #344054;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.back-dashboard-button:hover {
+  background: #f9fafb;
+}
+
+/* Error */
+
+.details-error {
+  margin-bottom: 20px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #fef3f2;
+  color: #b42318;
+  font-size: 14px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .patient-details-main {
+    width: 92%;
+    padding: 28px 0;
+  }
+
+  .details-heading h1 {
+    font-size: 24px;
+  }
+
+  .claim-status-header {
+    padding: 20px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .claim-info-section {
+    padding: 20px;
+  }
+
+  .claim-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-item.full-width {
+    grid-column: auto;
+  }
+
+  .details-actions {
+    padding: 18px 20px;
+  }
+
+  .back-dashboard-button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,29 @@
+.alert {
+  margin-bottom: 20px;
+  padding: 12px 14px;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.alert-error {
+  background: #fef3f2;
+  color: #b42318;
+}
+
+.alert-success {
+  background: #ecfdf3;
+  color: #027a48;
+}
+
+.alert-warning {
+  background: #fffaeb;
+  color: #b54708;
+}
+
+.alert-info {
+  background: #eff8ff;
+  color: #175cd3;
+}

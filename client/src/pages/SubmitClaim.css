@@ -1,0 +1,187 @@
+.submit-page {
+  min-height: 100vh;
+  background: #f4f7fb;
+}
+
+.submit-main {
+  width: 88%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.submit-heading {
+  margin-bottom: 28px;
+}
+
+.submit-heading h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  color: #172033;
+}
+
+.submit-heading p {
+  margin: 0;
+  color: #667085;
+}
+
+.submit-card {
+  background: #ffffff;
+  border: 1px solid #e5eaf1;
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
+}
+
+.submit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.submit-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.submit-field label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #344054;
+}
+
+.submit-field input,
+.submit-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #101828;
+  font-size: 15px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.submit-field input:focus,
+.submit-field textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.submit-field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.field-help {
+  color: #667085;
+  font-size: 13px;
+}
+
+/* File upload */
+
+.document-upload {
+  padding: 22px;
+  border: 1px dashed #98a2b3;
+  border-radius: 10px;
+  background: #f9fafb;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.document-upload:hover {
+  border-color: #2563eb;
+  background: #f5f8ff;
+}
+
+.document-upload input {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.document-upload input:focus {
+  box-shadow: none;
+}
+
+.document-info {
+  margin-top: 10px;
+  color: #667085;
+  font-size: 13px;
+}
+
+/* Actions */
+
+.submit-actions {
+  display: flex;
+  gap: 12px;
+  padding-top: 4px;
+}
+
+.submit-button,
+.back-button {
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submit-button {
+  border: none;
+  background: #2563eb;
+  color: #ffffff;
+  flex: 1;
+}
+
+.submit-button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.submit-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.back-button {
+  border: 1px solid #d0d5dd;
+  background: #ffffff;
+  color: #344054;
+}
+
+.back-button:hover {
+  background: #f9fafb;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .submit-main {
+    width: 92%;
+    padding: 28px 0;
+  }
+
+  .submit-card {
+    padding: 22px 18px;
+  }
+
+  .submit-heading h1 {
+    font-size: 24px;
+  }
+
+  .submit-actions {
+    flex-direction: column-reverse;
+  }
+
+  .submit-button,
+  .back-button {
+    width: 100%;
+  }
+}

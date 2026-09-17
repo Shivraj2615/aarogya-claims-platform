@@ -1,0 +1,256 @@
+.claim-review-page {
+  min-height: 100vh;
+  background: #f4f7fb;
+}
+
+.claim-review-main {
+  width: 88%;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.review-heading {
+  margin-bottom: 28px;
+}
+
+.review-heading h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  color: #172033;
+}
+
+.review-heading p {
+  margin: 0;
+  color: #667085;
+}
+
+/* Cards */
+
+.review-card {
+  background: #ffffff;
+  border: 1px solid #e5eaf1;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.review-card-header {
+  padding: 20px 26px;
+  border-bottom: 1px solid #eaecf0;
+}
+
+.review-card-header h2 {
+  margin: 0;
+  font-size: 17px;
+  color: #172033;
+}
+
+.review-card-body {
+  padding: 26px;
+}
+
+/* Claim information */
+
+.review-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.review-info-item {
+  padding: 16px;
+  background: #f9fafb;
+  border-radius: 9px;
+}
+
+.review-info-item.full-width {
+  grid-column: 1 / -1;
+}
+
+.review-info-label {
+  display: block;
+  margin-bottom: 6px;
+  color: #667085;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.review-info-value {
+  color: #172033;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.document-button {
+  display: inline-flex;
+  align-items: center;
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.document-button:hover {
+  text-decoration: underline;
+}
+
+/* Review form */
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.review-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.review-field label {
+  color: #344054;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.review-field select,
+.review-field input,
+.review-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 13px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #101828;
+  font-size: 14px;
+  outline: none;
+}
+
+.review-field select:focus,
+.review-field input:focus,
+.review-field textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.review-field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.review-field input:disabled,
+.review-field select:disabled,
+.review-field textarea:disabled {
+  background: #f2f4f7;
+  color: #667085;
+  cursor: not-allowed;
+}
+
+.review-help {
+  color: #667085;
+  font-size: 12px;
+}
+
+/* Decision banner */
+
+.decision-banner {
+  margin-bottom: 20px;
+  padding: 14px 16px;
+  border-radius: 9px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.decision-banner.approved {
+  background: #ecfdf3;
+  color: #027a48;
+}
+
+.decision-banner.rejected {
+  background: #fef3f2;
+  color: #b42318;
+}
+
+/* Actions */
+
+.review-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.update-button,
+.back-button {
+  padding: 11px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.update-button {
+  border: none;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.update-button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.update-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.back-button {
+  border: 1px solid #d0d5dd;
+  background: #ffffff;
+  color: #344054;
+}
+
+.back-button:hover {
+  background: #f9fafb;
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .claim-review-header {
+    padding: 16px 5%;
+  }
+
+  .claim-review-main {
+    width: 92%;
+    padding: 28px 0;
+  }
+
+  .review-heading h1 {
+    font-size: 24px;
+  }
+
+  .review-card-body {
+    padding: 20px;
+  }
+
+  .review-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-info-item.full-width {
+    grid-column: auto;
+  }
+
+  .review-actions {
+    flex-direction: column-reverse;
+  }
+
+  .update-button,
+  .back-button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,282 @@
+.insurer-dashboard {
+  min-height: 100vh;
+  background: #f4f7fb;
+}
+
+.insurer-main {
+  width: 88%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.insurer-heading {
+  margin-bottom: 28px;
+}
+
+.insurer-heading h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+  color: #172033;
+}
+
+.insurer-heading p {
+  margin: 0;
+  color: #667085;
+}
+
+/* Filters */
+
+.filters-card {
+  background: #ffffff;
+  border: 1px solid #e5eaf1;
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 24px;
+}
+
+.filters-header {
+  margin-bottom: 16px;
+}
+
+.filters-header h2 {
+  margin: 0;
+  font-size: 16px;
+  color: #344054;
+}
+
+.filters-form {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr auto auto;
+  gap: 12px;
+  align-items: end;
+}
+
+.filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-field label {
+  color: #667085;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.filter-field input,
+.filter-field select {
+  width: 100%;
+  box-sizing: border-box;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #d0d5dd;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #344054;
+  outline: none;
+}
+
+.filter-field input:focus,
+.filter-field select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.apply-filter-button,
+.clear-filter-button {
+  height: 40px;
+  padding: 0 15px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.apply-filter-button {
+  border: none;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.apply-filter-button:hover {
+  background: #1d4ed8;
+}
+
+.clear-filter-button {
+  border: 1px solid #d0d5dd;
+  background: #ffffff;
+  color: #344054;
+}
+
+.clear-filter-button:hover {
+  background: #f9fafb;
+}
+
+/* Claims table */
+
+.insurer-claims-card {
+  background: #ffffff;
+  border: 1px solid #e5eaf1;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.insurer-claims-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid #eaecf0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.insurer-claims-header h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #172033;
+}
+
+.claim-count {
+  color: #667085;
+  font-size: 13px;
+}
+
+.insurer-table-wrapper {
+  overflow-x: auto;
+}
+
+.insurer-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.insurer-table th,
+.insurer-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid #eaecf0;
+  white-space: nowrap;
+}
+
+.insurer-table th {
+  background: #f9fafb;
+  color: #475467;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.insurer-table td {
+  color: #344054;
+  font-size: 14px;
+}
+
+.insurer-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+/* Status */
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-pending {
+  background: #fff7e6;
+  color: #b54708;
+}
+
+.status-approved {
+  background: #ecfdf3;
+  color: #027a48;
+}
+
+.status-rejected {
+  background: #fef3f2;
+  color: #b42318;
+}
+
+/* Review */
+
+.review-button {
+  padding: 8px 13px;
+  border: 1px solid #2563eb;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.review-button:hover {
+  background: #eff6ff;
+}
+
+.view-button {
+  padding: 8px 13px;
+  border: 1px solid #d0d5dd;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #667085;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.view-button:hover {
+  background: #f9fafb;
+}
+
+/* States */
+
+.insurer-message {
+  padding: 40px 20px;
+  text-align: center;
+  color: #667085;
+}
+
+.insurer-error {
+  margin-bottom: 20px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #fef3f2;
+  color: #b42318;
+  font-size: 14px;
+}
+
+/* Responsive */
+
+@media (max-width: 1100px) {
+  .filters-form {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .insurer-header {
+    padding: 16px 5%;
+  }
+
+  .insurer-main {
+    width: 92%;
+    padding: 28px 0;
+  }
+
+  .insurer-heading h1 {
+    font-size: 24px;
+  }
+
+  .filters-form {
+    grid-template-columns: 1fr;
+  }
+
+  .apply-filter-button,
+  .clear-filter-button {
+    width: 100%;
+  }
+}
