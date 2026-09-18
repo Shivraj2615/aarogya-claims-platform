@@ -59,7 +59,6 @@ The application implements two role-based workflows:
   - `Pending`
   - `Approved`
   - `Rejected`
-
 - Approved amount validation
 - Insurer comments
 - Submission date tracking
@@ -70,7 +69,6 @@ The application implements two role-based workflows:
   - PDF
   - JPG
   - PNG
-
 - Maximum file size: 2 MB
 - Files are uploaded to Cloudinary
 - Documents are stored separately from the application server
@@ -339,7 +337,7 @@ npm install
 Create a `.env` file inside the `server` directory.
 
 ```env
-PORT=5000
+PORT=3000
 
 MONGO_URI=your_mongodb_connection_string
 

@@ -10,7 +10,11 @@ const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoutes");
 const claimRoutes = require("./routes/claimRoutes");
 
-app.use(cors());
+app.use(
+  cors({
+    origin: process.env.CLIENT_URL,
+  }),
+);
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
