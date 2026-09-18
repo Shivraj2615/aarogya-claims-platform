@@ -1,9 +1,8 @@
 import { useContext, useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
-import { Link } from "react-router-dom";
 import Loading from "../../components/common/Loading";
-import "./Login.css";
+import "./Auth.css";
 
 const Login = () => {
   const { user, loading, login } = useContext(AuthContext);
@@ -44,15 +43,15 @@ const Login = () => {
   }
 
   return (
-    <div className="login-page">
-      <div className="login-card">
-        <div className="login-brand">
+    <div className="auth-page">
+      <div className="auth-card">
+        <div className="auth-brand">
           <h1>Aarogya</h1>
           <p>Claims Management Platform</p>
         </div>
 
-        <form className="login-form" onSubmit={handleSubmit}>
-          <div className="login-field">
+        <form className="auth-form" onSubmit={handleSubmit}>
+          <div className="auth-field">
             <label htmlFor="email">Email</label>
 
             <input
@@ -65,7 +64,7 @@ const Login = () => {
             />
           </div>
 
-          <div className="login-field">
+          <div className="auth-field">
             <label htmlFor="password">Password</label>
 
             <input
@@ -78,20 +77,19 @@ const Login = () => {
             />
           </div>
 
-          {error && <p className="login-error">{error}</p>}
+          {error && <p className="auth-error">{error}</p>}
 
-          <button className="login-button" type="submit">
+          <button className="auth-button" type="submit">
             Login
           </button>
         </form>
 
-        <div className="login-demo">
+        <div className="auth-demo">
           <p>Use the provided demo credentials to continue.</p>
         </div>
 
-        <div className="login-register">
+        <div className="auth-footer">
           <span>Don't have an account?</span>
-
           <Link to="/register">Create one</Link>
         </div>
       </div>

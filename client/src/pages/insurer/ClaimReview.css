@@ -1,13 +1,12 @@
 .claim-review-page {
-  min-height: 100vh;
-  background: #f4f7fb;
+  min-height: calc(100vh - 64px);
+  background: #f1f7fc;
 }
 
 .claim-review-main {
-  width: 88%;
-  max-width: 950px;
+  width: min(1000px, calc(100% - 48px));
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 36px 0 48px;
 }
 
 .review-heading {
@@ -15,53 +14,58 @@
 }
 
 .review-heading h1 {
-  margin: 0 0 8px;
-  font-size: 28px;
-  color: #172033;
+  margin: 0;
+  color: #1e293b;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
 }
 
 .review-heading p {
-  margin: 0;
-  color: #667085;
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 15px;
 }
 
-/* Cards */
-
 .review-card {
-  background: #ffffff;
-  border: 1px solid #e5eaf1;
-  border-radius: 14px;
+  margin-bottom: 24px;
   overflow: hidden;
-  margin-bottom: 20px;
+  background: #ffffff;
+  border: 1px solid #dbe8f3;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(30, 64, 175, 0.05);
 }
 
 .review-card-header {
-  padding: 20px 26px;
-  border-bottom: 1px solid #eaecf0;
+  display: flex;
+  align-items: center;
+  min-height: 64px;
+  padding: 0 24px;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .review-card-header h2 {
   margin: 0;
-  font-size: 17px;
-  color: #172033;
+  color: #1e293b;
+  font-size: 18px;
+  font-weight: 650;
 }
 
 .review-card-body {
-  padding: 26px;
+  padding: 24px;
 }
-
-/* Claim information */
 
 .review-info-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
+  gap: 22px 28px;
 }
 
 .review-info-item {
-  padding: 16px;
-  background: #f9fafb;
-  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
 }
 
 .review-info-item.full-width {
@@ -69,33 +73,61 @@
 }
 
 .review-info-label {
-  display: block;
-  margin-bottom: 6px;
-  color: #667085;
-  font-size: 12px;
+  color: #64748b;
+  font-size: 13px;
   font-weight: 600;
 }
 
 .review-info-value {
-  color: #172033;
-  font-size: 14px;
+  color: #1e293b;
+  font-size: 15px;
   line-height: 1.5;
+  overflow-wrap: anywhere;
 }
 
 .document-button {
   display: inline-flex;
   align-items: center;
-  color: #2563eb;
-  font-size: 14px;
+  justify-content: center;
+  width: fit-content;
+  padding: 8px 14px;
+  border: 1px solid #93c5fd;
+  border-radius: 7px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 13px;
   font-weight: 600;
   text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .document-button:hover {
-  text-decoration: underline;
+  border-color: #60a5fa;
+  background: #dbeafe;
 }
 
-/* Review form */
+.decision-banner {
+  margin-bottom: 24px;
+  padding: 14px 16px;
+  border: 1px solid;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.decision-banner.approved {
+  border-color: #bbf7d0;
+  background: #f0fdf4;
+  color: #166534;
+}
+
+.decision-banner.rejected {
+  border-color: #fecaca;
+  background: #fef2f2;
+  color: #991b1b;
+}
 
 .review-form {
   display: flex;
@@ -110,127 +142,126 @@
 }
 
 .review-field label {
-  color: #344054;
+  color: #334155;
   font-size: 14px;
   font-weight: 600;
 }
 
-.review-field select,
 .review-field input,
+.review-field select,
 .review-field textarea {
   width: 100%;
   box-sizing: border-box;
-  padding: 11px 13px;
-  border: 1px solid #d0d5dd;
-  border-radius: 8px;
-  background: #ffffff;
-  color: #101828;
-  font-size: 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
   outline: none;
+  background: #ffffff;
+  color: #1e293b;
+  font-family: inherit;
+  font-size: 14px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-.review-field select:focus,
-.review-field input:focus,
-.review-field textarea:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+.review-field input,
+.review-field select {
+  height: 42px;
+  padding: 0 12px;
 }
 
 .review-field textarea {
+  min-height: 110px;
+  padding: 11px 12px;
   resize: vertical;
-  min-height: 120px;
+  line-height: 1.5;
+}
+
+.review-field input::placeholder,
+.review-field textarea::placeholder {
+  color: #94a3b8;
+}
+
+.review-field input:focus,
+.review-field select:focus,
+.review-field textarea:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.14);
 }
 
 .review-field input:disabled,
 .review-field select:disabled,
 .review-field textarea:disabled {
-  background: #f2f4f7;
-  color: #667085;
+  background: #f8fafc;
+  color: #64748b;
   cursor: not-allowed;
 }
 
 .review-help {
-  color: #667085;
+  color: #64748b;
   font-size: 12px;
 }
-
-/* Decision banner */
-
-.decision-banner {
-  margin-bottom: 20px;
-  padding: 14px 16px;
-  border-radius: 9px;
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.decision-banner.approved {
-  background: #ecfdf3;
-  color: #027a48;
-}
-
-.decision-banner.rejected {
-  background: #fef3f2;
-  color: #b42318;
-}
-
-/* Actions */
 
 .review-actions {
   display: flex;
   justify-content: space-between;
-  gap: 12px;
+  align-items: center;
+  gap: 14px;
   margin-top: 4px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
 }
 
-.update-button,
-.back-button {
-  padding: 11px 18px;
-  border-radius: 8px;
+.back-button,
+.update-button {
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 7px;
+  font-family: inherit;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.back-button {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #475569;
+}
+
+.back-button:hover {
+  border-color: #93c5fd;
+  background: #eff6ff;
+  color: #1d4ed8;
 }
 
 .update-button {
-  border: none;
+  border: 1px solid #2563eb;
   background: #2563eb;
   color: #ffffff;
 }
 
 .update-button:hover:not(:disabled) {
+  border-color: #1d4ed8;
   background: #1d4ed8;
 }
 
 .update-button:disabled {
-  opacity: 0.6;
+  opacity: 0.65;
   cursor: not-allowed;
 }
 
-.back-button {
-  border: 1px solid #d0d5dd;
-  background: #ffffff;
-  color: #344054;
-}
-
-.back-button:hover {
-  background: #f9fafb;
-}
-
-/* Mobile */
-
-@media (max-width: 650px) {
-  .claim-review-header {
-    padding: 16px 5%;
-  }
-
+@media (max-width: 700px) {
   .claim-review-main {
-    width: 92%;
-    padding: 28px 0;
+    width: min(100% - 32px, 1000px);
+    padding: 28px 0 36px;
   }
 
   .review-heading h1 {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   .review-card-body {
@@ -239,18 +270,52 @@
 
   .review-info-grid {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .review-info-item.full-width {
     grid-column: auto;
   }
+}
+
+@media (max-width: 480px) {
+  .claim-review-main {
+    width: calc(100% - 24px);
+    padding-top: 22px;
+  }
+
+  .review-heading {
+    margin-bottom: 20px;
+  }
+
+  .review-heading h1 {
+    font-size: 24px;
+  }
+
+  .review-heading p {
+    font-size: 14px;
+  }
+
+  .review-card-header {
+    min-height: 58px;
+    padding: 0 18px;
+  }
+
+  .review-card-header h2 {
+    font-size: 17px;
+  }
+
+  .review-card-body {
+    padding: 18px;
+  }
 
   .review-actions {
     flex-direction: column-reverse;
+    align-items: stretch;
   }
 
-  .update-button,
-  .back-button {
+  .back-button,
+  .update-button {
     width: 100%;
   }
 }

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { api } from "../../services/api";
 import Alert from "../../components/common/Alert";
-import "./Register.css";
+import "./Auth.css";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -50,20 +50,18 @@ const Register = () => {
   };
 
   return (
-    <div className="register-page">
-      <div className="register-card">
-        <div className="register-brand">
+    <div className="auth-page">
+      <div className="auth-card">
+        <div className="auth-brand">
           <h1>Aarogya</h1>
-
           <p>Create your claims management account</p>
         </div>
 
         <Alert type="error" message={error} />
-
         <Alert type="success" message={success} />
 
-        <form className="register-form" onSubmit={handleSubmit}>
-          <div className="register-field">
+        <form className="auth-form" onSubmit={handleSubmit}>
+          <div className="auth-field">
             <label htmlFor="name">Full Name</label>
 
             <input
@@ -77,7 +75,7 @@ const Register = () => {
             />
           </div>
 
-          <div className="register-field">
+          <div className="auth-field">
             <label htmlFor="email">Email</label>
 
             <input
@@ -91,7 +89,7 @@ const Register = () => {
             />
           </div>
 
-          <div className="register-field">
+          <div className="auth-field">
             <label htmlFor="password">Password</label>
 
             <input
@@ -106,7 +104,7 @@ const Register = () => {
             />
           </div>
 
-          <div className="register-field">
+          <div className="auth-field">
             <label htmlFor="role">Account Type</label>
 
             <select
@@ -116,19 +114,17 @@ const Register = () => {
               onChange={handleChange}
             >
               <option value="patient">Patient</option>
-
               <option value="insurer">Insurer</option>
             </select>
           </div>
 
-          <button className="register-button" type="submit" disabled={loading}>
+          <button className="auth-button" type="submit" disabled={loading}>
             {loading ? "Creating Account..." : "Create Account"}
           </button>
         </form>
 
-        <div className="register-login">
+        <div className="auth-footer">
           <span>Already have an account?</span>
-
           <Link to="/login">Login</Link>
         </div>
       </div>

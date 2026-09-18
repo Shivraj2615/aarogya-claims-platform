@@ -1,82 +1,107 @@
 .navbar {
-  min-height: 68px;
-  padding: 0 6%;
-  background: #ffffff;
-  border-bottom: 1px solid #e5eaf1;
-
+  min-height: 64px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  padding: 0 32px;
+  background: #ffffff;
+  border-bottom: 1px solid #dbe8f3;
+  box-shadow: 0 2px 8px rgba(30, 64, 175, 0.05);
 }
 
 .navbar-brand {
-  color: #172033;
-  font-size: 24px;
+  color: #2563eb;
+  font-size: 25px;
   font-weight: 700;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.4px;
   cursor: pointer;
+  user-select: none;
 }
 
 .navbar-right {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 20px;
 }
 
 .navbar-user {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .navbar-user-name {
-  color: #344054;
+  color: #1e293b;
   font-size: 14px;
   font-weight: 600;
 }
 
 .navbar-user-role {
-  padding: 4px 9px;
-  border-radius: 999px;
+  padding: 3px 8px;
+  border-radius: 12px;
   background: #eff6ff;
   color: #2563eb;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
 }
 
 .navbar-logout {
   padding: 8px 14px;
-  border: 1px solid #d0d5dd;
-  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
   background: #ffffff;
-  color: #344054;
+  color: #334155;
+  font-family: inherit;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .navbar-logout:hover {
-  background: #f9fafb;
+  background: #eff6ff;
+  border-color: #93c5fd;
+  color: #1d4ed8;
 }
 
 @media (max-width: 600px) {
   .navbar {
-    padding: 0 5%;
+    min-height: 60px;
+    padding: 0 18px;
+  }
+
+  .navbar-right {
+    gap: 12px;
   }
 
   .navbar-user {
-    display: none;
+    gap: 6px;
   }
 
-  .navbar-brand {
-    font-size: 21px;
+  .navbar-user-name {
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .navbar-logout {
-    padding: 8px 12px;
+    padding: 7px 11px;
+  }
+}
+
+@media (max-width: 420px) {
+  .navbar {
+    padding: 0 14px;
+  }
+
+  .navbar-brand {
+    font-size: 22px;
+  }
+
+  .navbar-user-role {
+    display: none;
   }
 }

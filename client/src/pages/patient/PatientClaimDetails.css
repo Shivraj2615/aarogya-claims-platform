@@ -1,13 +1,12 @@
 .patient-details-page {
-  min-height: 100vh;
-  background: #f4f7fb;
+  min-height: calc(100vh - 64px);
+  background: #f1f7fc;
 }
 
 .patient-details-main {
-  width: 88%;
-  max-width: 900px;
+  width: min(1000px, calc(100% - 48px));
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 36px 0 48px;
 }
 
 .details-heading {
@@ -15,89 +14,92 @@
 }
 
 .details-heading h1 {
-  margin: 0 0 8px;
-  font-size: 28px;
-  color: #172033;
+  margin: 0;
+  color: #1e293b;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
 }
 
 .details-heading p {
-  margin: 0;
-  color: #667085;
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 15px;
 }
-
-/* Main card */
 
 .claim-details-card {
-  background: #ffffff;
-  border: 1px solid #e5eaf1;
-  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.04);
+  background: #ffffff;
+  border: 1px solid #dbe8f3;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(30, 64, 175, 0.05);
 }
 
-/* Status header */
-
 .claim-status-header {
-  padding: 24px 28px;
-  border-bottom: 1px solid #eaecf0;
+  min-height: 68px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+  padding: 0 24px;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .claim-status-header h2 {
   margin: 0;
+  color: #1e293b;
   font-size: 18px;
-  color: #172033;
+  font-weight: 650;
 }
 
 .status-badge {
   display: inline-flex;
   align-items: center;
-  padding: 6px 12px;
-  border-radius: 999px;
-  font-size: 13px;
+  justify-content: center;
+  min-width: 70px;
+  padding: 6px 11px;
+  border-radius: 12px;
+  font-size: 12px;
   font-weight: 600;
 }
 
 .status-pending {
-  background: #fff7e6;
-  color: #b54708;
+  background: #fff7ed;
+  color: #c2410c;
 }
 
 .status-approved {
-  background: #ecfdf3;
-  color: #027a48;
+  background: #f0fdf4;
+  color: #15803d;
 }
 
 .status-rejected {
-  background: #fef3f2;
-  color: #b42318;
+  background: #fef2f2;
+  color: #b91c1c;
 }
 
-/* Information */
-
 .claim-info-section {
-  padding: 28px;
+  padding: 28px 24px;
 }
 
 .claim-info-section h3 {
-  margin: 0 0 20px;
+  margin: 0 0 22px;
+  color: #334155;
   font-size: 16px;
-  color: #344054;
+  font-weight: 650;
 }
 
 .claim-info-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 22px 28px;
 }
 
 .info-item {
-  padding: 16px;
-  background: #f9fafb;
-  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
 }
 
 .info-item.full-width {
@@ -105,36 +107,22 @@
 }
 
 .info-label {
-  display: block;
-  margin-bottom: 6px;
-  color: #667085;
+  color: #64748b;
   font-size: 13px;
+  font-weight: 600;
 }
 
 .info-value {
-  color: #172033;
+  color: #1e293b;
   font-size: 15px;
-  font-weight: 500;
   line-height: 1.5;
+  overflow-wrap: anywhere;
 }
-
-/* Comments */
-
-.comments-box {
-  padding: 18px;
-  background: #f9fafb;
-  border-radius: 10px;
-  color: #344054;
-  line-height: 1.6;
-  font-size: 14px;
-}
-
-/* Document */
 
 .document-link {
   display: inline-flex;
   align-items: center;
-  margin-top: 4px;
+  width: fit-content;
   color: #2563eb;
   font-size: 14px;
   font-weight: 600;
@@ -142,66 +130,70 @@
 }
 
 .document-link:hover {
+  color: #1d4ed8;
   text-decoration: underline;
 }
 
-/* Actions */
+.comments-box {
+  padding: 14px 16px;
+  border: 1px solid #dbe8f3;
+  border-radius: 7px;
+  background: #f8fafc;
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.6;
+}
 
 .details-actions {
-  padding: 20px 28px;
-  border-top: 1px solid #eaecf0;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 24px;
+  border-top: 1px solid #e2e8f0;
 }
 
 .back-dashboard-button {
-  padding: 11px 18px;
-  border: 1px solid #d0d5dd;
-  border-radius: 8px;
+  min-height: 42px;
+  padding: 0 18px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
   background: #ffffff;
-  color: #344054;
+  color: #475569;
+  font-family: inherit;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .back-dashboard-button:hover {
-  background: #f9fafb;
+  border-color: #93c5fd;
+  background: #eff6ff;
+  color: #1d4ed8;
 }
 
-/* Error */
-
-.details-error {
-  margin-bottom: 20px;
-  padding: 12px 14px;
-  border-radius: 8px;
-  background: #fef3f2;
-  color: #b42318;
-  font-size: 14px;
-}
-
-/* Mobile */
-
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .patient-details-main {
-    width: 92%;
-    padding: 28px 0;
+    width: min(100% - 32px, 1000px);
+    padding: 28px 0 36px;
   }
 
   .details-heading h1 {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   .claim-status-header {
-    padding: 20px;
-    align-items: flex-start;
-    flex-direction: column;
+    padding: 0 20px;
   }
 
   .claim-info-section {
-    padding: 20px;
+    padding: 24px 20px;
   }
 
   .claim-info-grid {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .info-item.full-width {
@@ -210,6 +202,42 @@
 
   .details-actions {
     padding: 18px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .patient-details-main {
+    width: calc(100% - 24px);
+    padding-top: 22px;
+  }
+
+  .details-heading {
+    margin-bottom: 20px;
+  }
+
+  .details-heading h1 {
+    font-size: 24px;
+  }
+
+  .details-heading p {
+    font-size: 14px;
+  }
+
+  .claim-status-header {
+    min-height: 60px;
+    padding: 0 18px;
+  }
+
+  .claim-status-header h2 {
+    font-size: 17px;
+  }
+
+  .claim-info-section {
+    padding: 20px 18px;
+  }
+
+  .details-actions {
+    padding: 16px 18px;
   }
 
   .back-dashboard-button {
