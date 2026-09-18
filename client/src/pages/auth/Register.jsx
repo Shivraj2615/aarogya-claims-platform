@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { api } from "../services/api";
-import Alert from "../components/Alert";
+import { api } from "../../services/api";
+import Alert from "../../components/common/Alert";
 import "./Register.css";
 
 const Register = () => {

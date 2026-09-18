@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { api, getAuthHeaders } from "../services/api";
-import Loading from "../components/Loading";
-import Alert from "../components/Alert";
+import { api, getAuthHeaders } from "../../services/api";
+import Loading from "../../components/common/Loading";
+import Alert from "../../components/common/Alert";
 import "./PatientClaimDetails.css";
 
 const PatientClaimDetails = () => {

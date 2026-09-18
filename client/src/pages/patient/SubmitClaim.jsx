@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { api, getAuthHeaders } from "../services/api";
-import Alert from "../components/Alert";
+import { api, getAuthHeaders } from "../../services/api";
+import Alert from "../../components/common/Alert";
 import "./SubmitClaim.css";
 
 const SubmitClaim = () => {

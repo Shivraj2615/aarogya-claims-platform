@@ -1,13 +1,11 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../context/AuthContext";
-import { api, getAuthHeaders } from "../services/api";
-import Loading from "../components/Loading";
-import Alert from "../components/Alert";
+import { api, getAuthHeaders } from "../../services/api";
+import Loading from "../../components/common/Loading";
+import Alert from "../../components/common/Alert";
 import "./PatientDashboard.css";
 
 const PatientDashboard = () => {
-  const { user, logout } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const [claims, setClaims] = useState([]);

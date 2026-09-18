@@ -1,33 +1,31 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Login from "./pages/Login";
-import Register from "./pages/Register";
+import Login from "./pages/auth/Login";
+import Register from "./pages/auth/Register";
 import ProtectedRoute from "./components/ProtectedRoute";
-import AppLayout from "./components/AppLayout";
+import AppLayout from "./components/layout/AppLayout";
 
-import NotFound from "./pages/NotFound";
-import Unauthorized from "./pages/Unauthorized";
+import NotFound from "./pages/error/NotFound";
+import Unauthorized from "./pages/error/Unauthorized";
 
-import PatientDashboard from "./pages/PatientDashboard";
-import SubmitClaim from "./pages/SubmitClaim";
-import PatientClaimDetails from "./pages/PatientClaimDetails";
+import PatientDashboard from "./pages/patient/PatientDashboard";
+import SubmitClaim from "./pages/patient/SubmitClaim";
+import PatientClaimDetails from "./pages/patient/PatientClaimDetails";
 
-import InsurerDashboard from "./pages/InsurerDashboard";
-import ClaimReview from "./pages/ClaimReview";
+import InsurerDashboard from "./pages/insurer/InsurerDashboard";
+import ClaimReview from "./pages/insurer/ClaimReview";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         {/* Public Routes */}
-
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/unauthorized" element={<Unauthorized />} />
 
         {/* Patient Routes */}
-
         <Route
           path="/patient"
           element={
@@ -62,7 +60,6 @@ function App() {
         />
 
         {/* Insurer Routes */}
-
         <Route
           path="/insurer"
           element={

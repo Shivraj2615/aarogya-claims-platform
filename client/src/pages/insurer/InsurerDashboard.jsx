@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { api, getAuthHeaders } from "../services/api";
-import Loading from "../components/Loading";
-import Alert from "../components/Alert";
+import { api, getAuthHeaders } from "../../services/api";
+import Loading from "../../components/common/Loading";
+import Alert from "../../components/common/Alert";
 import "./InsurerDashboard.css";
 
 const InsurerDashboard = () => {
