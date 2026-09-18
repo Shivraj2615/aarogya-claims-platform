@@ -11,6 +11,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [isLoggingIn, setIsLoggingIn] = useState(false);
 
   useEffect(() => {
     if (user?.role === "patient") {
@@ -25,6 +26,7 @@ const Login = () => {
 
     try {
       setError("");
+      setIsLoggingIn(true);
 
       const user = await login(email, password);
 
@@ -35,6 +37,8 @@ const Login = () => {
       }
     } catch (error) {
       setError(error.response?.data?.message || "Login failed");
+    } finally {
+      setIsLoggingIn(false);
     }
   };
 
@@ -61,6 +65,7 @@ const Login = () => {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
               required
+              disabled={isLoggingIn}
             />
           </div>
 
@@ -74,13 +79,14 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Enter your password"
               required
+              disabled={isLoggingIn}
             />
           </div>
 
           {error && <p className="auth-error">{error}</p>}
 
-          <button className="auth-button" type="submit">
-            Login
+          <button className="auth-button" type="submit" disabled={isLoggingIn}>
+            {isLoggingIn ? "Logging in..." : "Login"}
           </button>
         </form>
 

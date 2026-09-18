@@ -493,27 +493,27 @@ If this platform were extended beyond the assessment scope, potential improvemen
 
 ### Login
 
-![Login Page](client/public/login.png)
+![Login Page](client/public/01-login.png)
 
 ### Patient Dashboard
 
-![Patient Dashboard](client/public/patient-dashboard.png.png)
+![Patient Dashboard](client/public/02-patient-dashboard.png)
 
 ### Submit Claim
 
-![Submit Claim](client/public/submit-claim.png)
+![Submit Claim](client/public/03-submit-claim.png)
 
 ### Patient Claim Details
 
-![Patient Claim Details](client/public/patient-claim-details.png)
+![Patient Claim Details](client/public/04-patient-claim-details.png)
 
 ### Insurer Dashboard
 
-![Insurer Dashboard](client/public/insurer-dashboard.png)
+![Insurer Dashboard](client/public/05-insurer-dashboard.png)
 
 ### Claim Review
 
-![Claim Review](client/public/claim-review.png)
+![Claim Review](client/public/06-claim-review.png)
 
 ---
 
