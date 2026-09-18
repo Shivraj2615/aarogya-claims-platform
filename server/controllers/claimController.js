@@ -1,5 +1,6 @@
 const Claim = require("../models/Claim");
 const User = require("../models/User");
+const uploadToCloudinary = require("../utils/uploadToCloudinary");
 
 module.exports.createClaim = async (req, res) => {
   try {
@@ -24,6 +25,11 @@ module.exports.createClaim = async (req, res) => {
         message: "User not found",
       });
     }
+    
+    const uploadResult = await uploadToCloudinary(
+      req.file.buffer,
+      "aarogya/claims",
+    );
 
     const claim = await Claim.create({
       patientId: user._id,
@@ -31,7 +37,7 @@ module.exports.createClaim = async (req, res) => {
       email: user.email,
       claimAmount,
       description,
-      documentUrl: `/uploads/${req.file.filename}`,
+      documentUrl: uploadResult.secure_url,
     });
 
     res.status(201).json({

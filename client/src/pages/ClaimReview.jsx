@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { api, getAuthHeaders, API_BASE_URL } from "../services/api";
+import { api, getAuthHeaders } from "../services/api";
 import Loading from "../components/Loading";
 import Alert from "../components/Alert";
 import "./ClaimReview.css";
@@ -93,7 +93,7 @@ const ClaimReview = () => {
     return <p>{error || "Claim not found"}</p>;
   }
 
-  const documentUrl = `${API_BASE_URL}${claim.documentUrl}`;
+  const documentUrl = claim.documentUrl;
   const isDecided = claim.status !== "Pending";
 
   return (
