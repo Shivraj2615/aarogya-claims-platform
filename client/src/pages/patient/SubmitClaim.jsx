@@ -118,7 +118,7 @@ const SubmitClaim = () => {
                 />
 
                 <div className="document-info">
-                  PDF, JPG or PNG • Maximum file size: 5 MB
+                  PDF, JPG or PNG • Maximum file size: 2 MB
                 </div>
               </div>
             </div>
